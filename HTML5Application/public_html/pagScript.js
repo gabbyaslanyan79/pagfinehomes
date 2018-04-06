@@ -37,6 +37,9 @@ function clearContactForm(){
     document.getElementById("message").value = "";    
 };
 
+function test(){
+    alert("asdf");
+}
 
 //var slideIndex = 0;
 //showSlides();
