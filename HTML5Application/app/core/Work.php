@@ -4,6 +4,7 @@ class Work {
     private $name;
     private $picturePath;
     private $pictures = [];
+    private $tourLink;
     
     function __construct($name) {
         $this->name = $name;
@@ -14,10 +15,11 @@ class Work {
     }
     
     public function addPicture($picture){
+        $picture->setPath($this->picturePath);
         $this->pictures[] = $picture;
     }
     
-    public function getPicture(){
+    public function getPictures(){
         return $this->pictures;
     }
     
@@ -27,5 +29,13 @@ class Work {
 
     function setPicturePath($picturePath) {
         $this->picturePath = $picturePath;
+    }
+    
+    function getTourLink() {
+        return $this->tourLink;
+    }
+
+    function setTourLink($tourLink) {
+        $this->tourLink = $tourLink;
     }
 } 

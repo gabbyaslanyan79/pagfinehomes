@@ -372,7 +372,7 @@ ul {
     float: right;
 }
 
-.pag-work a {
+.left-menu a {
     color: #999;
     font-style: italic;
     font-size: 20px;
@@ -380,7 +380,7 @@ ul {
     margin-left: 10px;
 }
 
-.pag-work a:hover, .pag-work a:active {
+.left-menu a:hover, .pag-work a:active {
     color: #666;
 }
 

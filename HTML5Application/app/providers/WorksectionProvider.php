@@ -18,59 +18,65 @@ class WorksectionProvider {
     }
     
     private function constructCompleted(){
-        $completedWorksection = new WorkSection("Completed Projects");
-        $completedWorksection->addWork('east_of_market_kirkland', $this->constructEastOfMarket());
-        $completedWorksection->addWork('enatai_bellevue', $this->constructEnataiBellevue());
-        $completedWorksection->addWork('coguar_mountain_bellevue', $this->constructCoguarMountainBellevue());
+        $workSection = new WorkSection("Completed Projects");
+        $workSection->addWork('east_of_market_kirkland', $this->constructEastOfMarket());
+        $workSection->addWork('enatai_bellevue', $this->constructEnataiBellevue());
+        $workSection->addWork('coguar_mountain_bellevue', $this->constructCoguarMountainBellevue());
 
-        return $completedWorksection;
+        return $workSection;
     }
     
     private function constructCurrent(){
-        $completedWorksection = new WorkSection("Current Projects");
-        $completedWorksection->addWork('east_of_market_kirkland', $this->constructEastOfMarket());
-        return $completedWorksection;
+        $workSection = new WorkSection("Current Projects");
+        $workSection->addWork('east_of_market_kirkland', $this->constructEastOfMarket());
+        return $workSection;
     }
     
     private function constructFuture(){
-        $completedWorksection = new WorkSection("Future Plans");
-        $completedWorksection->addWork('east_of_market_kirkland', $this->constructEastOfMarket());
-        return $completedWorksection;
+        $workSection = new WorkSection("Future Plans");
+        $workSection->addWork('east_of_market_kirkland', $this->constructEastOfMarket());
+        return $workSection;
     }
     
     private function constructEastOfMarket(){
-        $eastOfMarket = new Work("East Of Market Kirkland");
-        $eastOfMarket->setPicturePath("img/works/east_of_market_kirkland");
-        $eastOfMarket->addPicture(new Picture('1.jpg'));
-        $eastOfMarket->addPicture(new Picture('2.jpg'));
-        $eastOfMarket->addPicture(new Picture('3.jpg'));
-        $eastOfMarket->addPicture(new Picture('4.jpg'));
-        $eastOfMarket->addPicture(new Picture('5.jpg'));
+        $work = new Work("East Of Market Kirkland");
+        $work->setTourLink("http://tours.tourfactory.com/tours/tour.asp?t=1538755&guid=1b975b51-875a-40db-85cb-b854730b48ca&r=http%3A%2F%2Ffx%2Etourfactory%2Ecom%2FTour%2FDownloadPhotos%2F1538755");
+        $work->setPicturePath("/img/works/east_of_market_kirkland");
+        $work->addPicture(new Picture('1.jpg'));
+        $work->addPicture(new Picture('2.jpg'));
+        $work->addPicture(new Picture('3.jpg'));
+        $work->addPicture(new Picture('4.jpg'));
+        $work->addPicture(new Picture('5.jpg'));
+        $work->addPicture(new Picture('6.jpg'));
         
-        return $eastOfMarket;
+        return $work;
     }
     
     private function constructEnataiBellevue(){
-        $enataiBellevue = new Work("Enatai Bellevue");
-        $enataiBellevue->setPicturePath("img/works/enatai_bellevue");
-        $enataiBellevue->addPicture(new Picture('1.jpg'));
-        $enataiBellevue->addPicture(new Picture('2.jpg'));
-        $enataiBellevue->addPicture(new Picture('3.jpg'));
-        $enataiBellevue->addPicture(new Picture('4.jpg'));
-        $enataiBellevue->addPicture(new Picture('5.jpg'));
+        $work = new Work("Enatai Bellevue");
+        $work->setTourLink("http://tours.tourfactory.com/tours/tour.asp?t=1538755&guid=1b975b51-875a-40db-85cb-b854730b48ca&r=http%3A%2F%2Ffx%2Etourfactory%2Ecom%2FTour%2FDownloadPhotos%2F1538755");
+        $work->setPicturePath("/img/works/east_of_market_kirkland");
+        $work->addPicture(new Picture('1.jpg'));
+        $work->addPicture(new Picture('2.jpg'));
+        $work->addPicture(new Picture('3.jpg'));
+        $work->addPicture(new Picture('4.jpg'));
+        $work->addPicture(new Picture('5.jpg'));
+        $work->addPicture(new Picture('6.jpg'));
         
-        return $enataiBellevue;
+        return $work;
     }
     
     private function constructCoguarMountainBellevue(){
-        $coguarMountainBellevue = new Work("Coguar Mountain Bellevue");
-        $coguarMountainBellevue->setPicturePath("img/works/coguar_mountain_bellevue");
-        $coguarMountainBellevue->addPicture(new Picture('1.jpg'));
-        $coguarMountainBellevue->addPicture(new Picture('2.jpg'));
-        $coguarMountainBellevue->addPicture(new Picture('3.jpg'));
-        $coguarMountainBellevue->addPicture(new Picture('4.jpg'));
-        $coguarMountainBellevue->addPicture(new Picture('5.jpg'));
+        $work = new Work("Coguar Mountain Bellevue");
+        $work->setTourLink("http://tours.tourfactory.com/tours/tour.asp?t=1538755&guid=1b975b51-875a-40db-85cb-b854730b48ca&r=http%3A%2F%2Ffx%2Etourfactory%2Ecom%2FTour%2FDownloadPhotos%2F1538755");
+        $work->setPicturePath("/img/works/east_of_market_kirkland");
+        $work->addPicture(new Picture('1.jpg'));
+        $work->addPicture(new Picture('2.jpg'));
+        $work->addPicture(new Picture('3.jpg'));
+        $work->addPicture(new Picture('4.jpg'));
+        $work->addPicture(new Picture('5.jpg'));
+        $work->addPicture(new Picture('6.jpg'));
         
-        return $coguarMountainBellevue;
+        return $work;
     }
 } 

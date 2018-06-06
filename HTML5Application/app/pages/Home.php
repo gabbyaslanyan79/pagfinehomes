@@ -19,39 +19,39 @@ function pageHome(){
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
-            <img src="/img/house1.jpg" alt="carousel-image1">
+            <img src="/img/carousel/house1.jpg" alt="carousel-image1">
         </div>
 
         <div class="item">
-            <img src="/img/house2.jpg" alt="carousel-image2">
+            <img src="/img/carousel/house2.jpg" alt="carousel-image2">
         </div>
 
         <div class="item">
-            <img src="/img/house3.jpg" alt="carousel-image3">
+            <img src="/img/carousel/house3.jpg" alt="carousel-image3">
         </div>
 
         <div class="item">
-            <img src="/img/house4.jpg" alt="carousel-image4">
+            <img src="/img/carousel/house4.jpg" alt="carousel-image4">
         </div>  
 
         <div class="item">
-            <img src="/img/house5.jpg" alt="carousel-image5">
+            <img src="/img/carousel/house5.jpg" alt="carousel-image5">
         </div>  
 
         <div class="item">
-            <img src="/img/house6.jpg" alt="carousel-image6">
+            <img src="/img/carousel/house6.jpg" alt="carousel-image6">
         </div>
 
         <div class="item">
-            <img src="/img/house7.jpg" alt="carousel-image7">
+            <img src="/img/carousel/house7.jpg" alt="carousel-image7">
         </div>
 
         <div class="item">
-            <img src="/img/house8.jpg" alt="carousel-image8">
+            <img src="/img/carousel/house8.jpg" alt="carousel-image8">
         </div>
 
         <div class="item">
-            <img src="/img/house9.jpg" alt="carousel-image9">
+            <img src="/img/carousel/house9.jpg" alt="carousel-image9">
         </div>
     </div>
 
@@ -72,7 +72,7 @@ function pageHome(){
     <div class="row">
         <div class="col-sm-4 pag-col-style">
             <a href="work.html">
-                <img src="icon-work.png" class="icon-pag" alt="Our Work Icon">
+                <img src="/img/content/icon-work.png" class="icon-pag" alt="Our Work Icon">
                 <h3 class="pag-h3">Our Work</h3>
                 <p>Sit back, relax and take a closer look to the work we have done and see our current projects and our future big plans...
                 </p>
@@ -82,7 +82,7 @@ function pageHome(){
 
         <div class="col-sm-4 pag-col-style" >
             <a href="http://tours.tourfactory.com/tours/tour.asp?t=1538755&guid=1b975b51-875a-40db-85cb-b854730b48ca&r=http%3A%2F%2Ffx%2Etourfactory%2Ecom%2FTour%2FDownloadPhotos%2F1538755"  target="_blank">
-                <img src="icon-tour.png" class="icon-pag" alt="Virtual Tour Icon" >
+                <img src="/img/content/icon-tour.png" class="icon-pag" alt="Virtual Tour Icon" >
                 <h3 class="pag-h3">Virtual Tour</h3>
                 <p>
                     Take a virtual tour on one of our construction gems.
@@ -93,7 +93,7 @@ function pageHome(){
 
         <div class="col-sm-4 pag-col-style" >
             <a href="about.html">
-                <img src="icon-mission.png" class="icon-pag" alt="Our Mission Icon">
+                <img src="/img/content/icon-mission.png" class="icon-pag" alt="Our Mission Icon">
                 <h3 class="pag-h3">Our Mission</h3>
                 <p>PAG Construction is committed to building multi-generational, sustainable, estate size homes in King County, WA.          
                 </p>           

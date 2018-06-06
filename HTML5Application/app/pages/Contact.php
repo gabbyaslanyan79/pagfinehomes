@@ -3,7 +3,7 @@
 function pageContact() {
     ?>
     <div class="pag-about">
-        <img src="img/pag-contact.jpg" class="img-responsive" alt="Contact Us Image">
+        <img src="img/content/pag-contact.jpg" class="img-responsive" alt="Contact Us Image">
         <div class="pag-pic-heading">Contact Us</div>
     </div>    
 

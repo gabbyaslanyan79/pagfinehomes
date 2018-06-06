@@ -21,12 +21,15 @@ function pageWorks() {
     }
     else{
         $work = $works[$workKey];
-    }    
+    }
+    
+    $pictures = $work->getPictures();
+    $fronPic = array_shift($pictures);
 
     ?>
     <div class="row pag-work">
         <div class="col-sm-4">
-            <ul id="left-menu">
+            <ul class="left-menu">
                 <?php
                     foreach ($workSections as $scKey => $wkSection) {
                 ?>
@@ -52,60 +55,36 @@ function pageWorks() {
         <!--Big and small pictures start-->
         <div class="col-sm-8">
             <div class="big-container">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-                <span class="pag-work-heading">Cougar Mountain Bellevue</span>
+                <a href="<?php echo $fronPic->getFilePath()?>" data-toggle="lightbox" data-gallery="example-gallery">
+                    <img  class="pag-work-bigimg" src="<?php echo $fronPic->getFilePath()?>">
+                </a>
+                <span class="pag-work-heading"><?php echo $work->getName()?></span>
                 <ul class="div-tour">
-                    <li><a class="div-tour" href="http://tours.tourfactory.com/tours/tour.asp?t=1538755&guid=1b975b51-875a-40db-85cb-b854730b48ca&r=http%3A%2F%2Ffx%2Etourfactory%2Ecom%2FTour%2FDownloadPhotos%2F1538755"  target="_blank">
-                            <img src="icon-tour.png" alt="Virtual Tour Icon"></a>  
+                    <li><a class="div-tour" href="<?php echo $work->getTourLink()?>"  target="_blank">
+                            <img src="/img/content/icon-tour.png" alt="Virtual Tour Icon"></a>  
                     </li>
                     <li><span class="tour-text">Take the Tour</span></li>    
                 </ul>
             </div>
             <div class="clear-float"></div>
+            <?php 
+            foreach($pictures as $pic){?>
             <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
+                <a href="<?php echo $pic->getFilePath()?>" data-toggle="lightbox" data-gallery="example-gallery">
+                <img  class="pag-work-bigimg" src="<?php echo $pic->getFilePath()?>">
+                </a>
             </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
-            <div class="col-sm-6 pag-work-smlimg">
-                <img  class="pag-work-bigimg" src="/img/content/002_Front.jpg">
-            </div>
+            <?php } ?>
         </div>
-
         <!--Big and small pictures end-->
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script type="text/javascript">
+                        $(document).ready(function ($) {
+                            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+                        });
+    </script>
 <?php } ?>

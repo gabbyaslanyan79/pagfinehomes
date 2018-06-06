@@ -15,9 +15,10 @@ require_once dirname(__FILE__).'/../app/providers/WorksectionProvider.php';
 
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/pagstyles.css">
+        <link rel="stylesheet" href="/css/pagstyles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
 
-        <script src="/pagScript.js"></script>
+        <script src="/js/pagScript.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
@@ -29,8 +30,8 @@ require_once dirname(__FILE__).'/../app/providers/WorksectionProvider.php';
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a href="/"><img  id="pag-logo" src="pag_logo.jpg" alt="Pag Fine Homes logo"></a>
-                        <a href="/?page=contact"><img class="media-contact" src="media-contact.png" alt="Contact Icon"></a>
+                        <a href="/"><img  id="pag-logo" src="/img/content/pag_logo.jpg" alt="Pag Fine Homes logo"></a>
+                        <a href="/?page=contact"><img class="media-contact" src="/img/content/media-contact.png" alt="Contact Icon"></a>
                     </div>
                     <ul class="nav navbar-nav pag-nav-text">
                         <li><a href="/">Home</a></li>
@@ -77,19 +78,18 @@ require_once dirname(__FILE__).'/../app/providers/WorksectionProvider.php';
             <!--Footer start-->
             <div class="pag-footer container-fluid">
                 <ul class="pag-partners">
-                    <li><img src="/img/partners1.png"></li>
-                    <li><img src="/img/partners2.png"></li>
-                    <li><img src="/img/partners3.png"></li>
-                    <li><img src="/img/partners4.png"></li>
+                    <li><img src="/img/content/partners1.png"></li>
+                    <li><img src="/img/content/partners2.png"></li>
+                    <li><img src="/img/content/partners3.png"></li>
+                    <li><img src="/img/content/partners4.png"></li>
                 </ul>
                 <ul class="footer-nav">
-                    <li><a >Home</a></li>
-                    <li><a>Our Work</a></li>
-                    <li><a>About Us</a></li>
-                    <li><a>Contact Us</a></li>        
+                    <li><a href="/?page=home">Home</a></li>
+                    <li><a href="/?page=works">Our Work</a></li>
+                    <li><a href="/?page=about">About Us</a></li>
+                    <li><a href="/?page=contact">Contact Us</a></li>        
                 </ul>
                 <span>© 2018 PAG FINE HOMES LLC. ALL RIGHTS RESERVED</span>
-
             </div>
             <!--Footer end-->
         </div>
