@@ -2,6 +2,9 @@
 require_once dirname(__FILE__).'/../app/pages/Home.php';
 require_once dirname(__FILE__).'/../app/pages/Contact.php';
 require_once dirname(__FILE__).'/../app/pages/About.php';
+require_once dirname(__FILE__).'/../app/pages/Works.php';
+require_once dirname(__FILE__).'/../app/pages/NotFound.php';
+require_once dirname(__FILE__).'/../app/providers/WorksectionProvider.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,12 +35,15 @@ require_once dirname(__FILE__).'/../app/pages/About.php';
                     <ul class="nav navbar-nav pag-nav-text">
                         <li><a href="/">Home</a></li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="/work.html">OUR WORK<span class="toggle-sign">></span></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown">OUR WORK<span class="toggle-sign">></span></a>
 
                             <ul class="dropdown-menu">
-                                <li><a href="/work.html/#completed">COMPLETED PROJECTS</a></li>
-                                <li><a href="/work.html/#current">CURRENT PROJECTS</a></li>
-                                <li><a href="/work.html/#future">FUTURE PLANS</a></li>
+                                <?php
+                                $workSectionProvider = new WorksectionProvider();
+                                foreach ($workSectionProvider->getWorkSections() as $key => $workSection) {
+                                    echo '<li class="work-menu-item"><a href="/?page=works&section='.$key.'">' . strtoupper($workSection->getName()) . '</a></li>';
+                                };
+                                ?>
                             </ul>
                         </li>    
                         <li><a href="/?page=about">ABOUT US</a></li>
@@ -58,6 +64,9 @@ require_once dirname(__FILE__).'/../app/pages/About.php';
                     break;
                 case "about":
                     pageAbout();
+                    break;
+                case "works":
+                    pageWorks();
                     break;
                 default:
                     pageNotFound();

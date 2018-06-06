@@ -83,7 +83,7 @@ ul.dropdown-menu {
 .dropdown-menu li a {
     line-height: 2.5 !important;        
     border-bottom: 1px solid #ccc;
-    padding: 0;    
+  
     background-color: #efefef;
 }
 
@@ -384,16 +384,24 @@ ul {
     color: #666;
 }
 
-#demo a:link, #demo li:visited {
-    color: #bfbfc0;
+.left-menu-item{
     margin-left: 30px;
-}
-
-#demo a:hover, #demo li:active {
     color: #666;
 }
 
-.pag-work a:first-child {
+.left-menu-item a:link, .left-menu-item a:visited {
+    color: #bfbfc0;
+}
+
+.left-menu-item a:hover, .left-menu-item a:active, .left-menu-item a.current {
+    color: #666;
+}
+
+.left-menu-item a.current{
+    cursor: default;
+}
+
+a.left-menu-section-header {
     cursor: pointer;
 }
 
@@ -405,11 +413,6 @@ div.email-error {
     color: #cc0033;
     font-size: 16px;
 }
-
-
-
-
-
 
 @media only screen and (max-width: 768px) {
     #pag-logo {            

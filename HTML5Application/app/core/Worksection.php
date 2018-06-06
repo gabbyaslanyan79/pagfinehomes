@@ -17,4 +17,7 @@ class Worksection {
     public function addWork($key, $work){
         $this->works[$key] = $work;
     }
+    function getWorks() {
+        return $this->works;
+    }    
 } 
