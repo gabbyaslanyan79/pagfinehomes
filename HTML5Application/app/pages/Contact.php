@@ -41,7 +41,7 @@ function pageContact() {
                     'X-Mailer: PHP/' . phpversion();
 
             try {
-                $to = "hyeghiazaryan@gmail.com";
+                $to = "pagfinehomes@gmail.com";
                 if (mail($to, $subject, $message, $headers)) {
                     $name = "";
                     $email = "";

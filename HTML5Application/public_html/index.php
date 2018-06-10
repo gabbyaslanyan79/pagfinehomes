@@ -78,10 +78,10 @@ require_once dirname(__FILE__).'/../app/providers/WorksectionProvider.php';
             <!--Footer start-->
             <div class="pag-footer container-fluid">
                 <ul class="pag-partners">
-                    <li><img src="/img/content/partners1.png"></li>
-                    <li><img src="/img/content/partners2.png"></li>
-                    <li><img src="/img/content/partners3.png"></li>
-                    <li><img src="/img/content/partners4.png"></li>
+                    <li><img src="/img/content/partners11.png"></li>
+                    <li><img src="/img/content/partners11.png"></li>
+                    <li><img src="/img/content/partners11.png"></li>
+                    <li><img src="/img/content/partners11.png"></li>
                 </ul>
                 <ul class="footer-nav">
                     <li><a href="/?page=home">Home</a></li>

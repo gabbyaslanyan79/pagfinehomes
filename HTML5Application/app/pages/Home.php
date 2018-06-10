@@ -71,7 +71,7 @@ function pageHome(){
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-4 pag-col-style">
-            <a href="work.html">
+            <a href="/?page=works">
                 <img src="/img/content/icon-work.png" class="icon-pag" alt="Our Work Icon">
                 <h3 class="pag-h3">Our Work</h3>
                 <p>Sit back, relax and take a closer look to the work we have done and see our current projects and our future big plans...
@@ -92,7 +92,7 @@ function pageHome(){
         </div>
 
         <div class="col-sm-4 pag-col-style" >
-            <a href="about.html">
+            <a href="/?page=about">
                 <img src="/img/content/icon-mission.png" class="icon-pag" alt="Our Mission Icon">
                 <h3 class="pag-h3">Our Mission</h3>
                 <p>PAG Construction is committed to building multi-generational, sustainable, estate size homes in King County, WA.          
