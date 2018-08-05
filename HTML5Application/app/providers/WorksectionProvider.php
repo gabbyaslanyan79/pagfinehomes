@@ -8,17 +8,16 @@ class WorksectionProvider {
     private $workSections = [];
     
     public function __construct() {
-        $this->workSections['completed'] = $this->constructCompleted();
+        $this->workSections['recent'] = $this->constructRecent();
         $this->workSections['current'] = $this->constructCurrent();
-        $this->workSections['future'] = $this->constructFuture();
     }
     
     public function getWorkSections(){
         return $this->workSections;
     }
     
-    private function constructCompleted(){
-        $workSection = new WorkSection("Completed Projects");
+    private function constructRecent(){
+        $workSection = new WorkSection("Recent Homes");
         $workSection->addWork('east_of_market_kirkland', $this->constructEastOfMarket());
         $workSection->addWork('enatai_bellevue', $this->constructEnataiBellevue());
         $workSection->addWork('cougar_mountain_bellevue', $this->constructCougarMountainBellevue());
@@ -27,16 +26,15 @@ class WorksectionProvider {
     }
     
     private function constructCurrent(){
-        $workSection = new WorkSection("Current Projects");
-       // $workSection->addWork('east_of_market_kirkland', $this->constructEastOfMarket());
+        $workSection = new WorkSection("Current Homes");
+        $workSection->addWork('enatai_contemporary_farmhouse', $this->constructEnataiContempFarmhouse());
+        $workSection->addWork('clyde_hill_luxury_modern', $this->constructClydeHillLuxuryModern());
+        $workSection->addWork('houghton_point_modern_I', $this->constructHoughtonPointI());
+        $workSection->addWork('houghton_point_modern_II', $this->constructHoughtonPointII());
+        
         return $workSection;
     }
-    
-    private function constructFuture(){
-        $workSection = new WorkSection("Future Plans");
-       // $workSection->addWork('east_of_market_kirkland', $this->constructEastOfMarket());
-        return $workSection;
-    }
+
     
     private function constructEastOfMarket(){
         $work = new Work("East Of Market Kirkland");
@@ -172,6 +170,72 @@ class WorksectionProvider {
         $work->addPicture(new Picture('41.jpg'));
         $work->addPicture(new Picture('42.jpg'));
         $work->addPicture(new Picture('43.jpg'));
+        
+        return $work;
+    }
+    
+    private function constructEnataiContempFarmhouse(){
+        $work = new Work("Enatai Contemporary Farmhouse"); 
+        $work->setPicturePath("/img/works/enatai_contemporary_farmhouse");
+        $work->addPicture(new Picture('1.jpg'));
+        $work->addPicture(new Picture('2.jpg'));
+        $work->addPicture(new Picture('3.jpg'));
+        $work->addPicture(new Picture('4.jpg'));
+        
+        $work->addHighlight("3246 112th Ave SE Bellevue WA");
+        $work->addHighlight("5,212 sq ft");
+        $work->addHighlight("10,000 sq ft lot");
+        $work->addHighlight("Completion Summer of 2018");
+        
+        return $work;
+    }
+    
+    
+    private function constructClydeHillLuxuryModern(){
+        $work = new Work("Clyde Hill Luxury Modern"); 
+        $work->setPicturePath("/img/works/clyde_hill_luxury_modern");
+        $work->addPicture(new Picture('1.jpg'));
+        $work->addPicture(new Picture('2.jpg'));
+        $work->addPicture(new Picture('3.jpg'));
+        $work->addPicture(new Picture('4.jpg'));        
+        $work->addPicture(new Picture('5.jpg'));
+        $work->addPicture(new Picture('6.jpg'));
+        
+        $work->addHighlight("9716 NE 14th St Clyde Hill WA");
+        $work->addHighlight("5,358 sq ft");
+        $work->addHighlight("882 sq ft rooftop deck");
+        $work->addHighlight("13k+ sq ft lot");
+        $work->addHighlight("Completion Spring of 2019");
+        
+        return $work;
+    }
+    
+    private function constructHoughtonPointI(){
+        $work = new Work("Houghton Point Modern I"); 
+        $work->setPicturePath("/img/works/houghton_point_modern_I");
+        $work->addPicture(new Picture('1.jpg'));
+        $work->addPicture(new Picture('2.jpg'));
+        $work->addPicture(new Picture('3.jpg'));
+        $work->addPicture(new Picture('4.jpg'));
+        
+        $work->addHighlight("104xx NE 43rd St Kirkland WA Lot2");
+        $work->addHighlight("4,500+ sq ft");
+        $work->addHighlight("9,700 sq ft lot");
+        $work->addHighlight("Completion Summer of 2019");
+        
+        return $work;
+    }
+    
+    
+    private function constructHoughtonPointII(){
+        $work = new Work("Houghton Point Modern II"); 
+        $work->setPicturePath("/img/works/houghton_point_modern_II");
+        $work->addPicture(new Picture('placeholder.jpg'));
+        
+        $work->addHighlight("104xx NE 43rd St Kirkland WA Lot1");
+        $work->addHighlight("4,500+ sq ft");
+        $work->addHighlight("7,970 sq ft lot");
+        $work->addHighlight("Completion Summer of 2019");
         
         return $work;
     }

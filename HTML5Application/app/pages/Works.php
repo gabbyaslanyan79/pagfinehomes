@@ -24,7 +24,12 @@ function pageWorks() {
     }
     
     $pictures = $work->getPictures();
-    $fronPic = array_shift($pictures);
+    if($sectionKey != "current"){
+        $fronPic = array_shift($pictures);
+    }
+    else{
+        $fronPic = "";
+    }
 
     ?>
     <div class="row pag-work">
@@ -53,6 +58,34 @@ function pageWorks() {
             </ul>
         </div>
         <!--Big and small pictures start-->
+        
+        <?php if($sectionKey == "current"){ ?>
+        <div class="col-sm-8">
+            <div class="big-container">
+                <br />
+                <span class="pag-work-heading"><?php echo $work->getName()?></span>
+                <ul class="current-props">
+                <?php
+                $highlights = $work->getHighlights();
+                foreach($highlights as $highlight){?>
+                    <li><?php echo $highlight?></li>
+                <?php } ?>
+                </ul>
+            </div>
+            <div class="clear-float"></div>
+            <?php 
+            foreach($pictures as $pic){?>
+            <div class="col-sm-6 pag-work-smlimg">
+                <a href="<?php echo $pic->getFilePath()?>" data-toggle="lightbox" data-gallery="example-gallery">
+                <img  class="pag-work-bigimg" src="<?php echo $pic->getFilePath()?>">
+                </a>
+            </div>
+            <?php } ?>
+        </div>
+        <?php
+        }
+        else{
+        ?>
         <div class="col-sm-8">
             <div class="big-container">
                 <a href="<?php echo $fronPic->getFilePath()?>" data-toggle="lightbox" data-gallery="example-gallery">
@@ -76,6 +109,7 @@ function pageWorks() {
             </div>
             <?php } ?>
         </div>
+        <?php } ?>
         <!--Big and small pictures end-->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>

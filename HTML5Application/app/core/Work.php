@@ -4,6 +4,7 @@ class Work {
     private $name;
     private $picturePath;
     private $pictures = [];
+    private $highlights = [];
     private $tourLink;
     
     function __construct($name) {
@@ -21,6 +22,14 @@ class Work {
     
     public function getPictures(){
         return $this->pictures;
+    }
+    
+    public function addHighlight($highlight){
+        $this->highligts[] = $highlight;
+    }
+    
+    public function getHighlights(){
+        return $this->highligts;
     }
     
     function getPicturePath() {

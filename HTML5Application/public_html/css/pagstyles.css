@@ -329,7 +329,7 @@ ul {
 }
 
 .pag-work-heading {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-style: italic;
     color: #6d6d6d;    
 }
@@ -375,7 +375,7 @@ ul {
 .left-menu a {
     color: #999;
     font-style: italic;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: capitalize;
     margin-left: 10px;
 }
@@ -418,6 +418,13 @@ div.email-error {
     cursor: pointer;
 }
 
+.current-props {
+    list-style-type: disc;
+    font-style: italic;
+    margin: 30px;
+    
+}
+
 @media only screen and (max-width: 768px) {
     #pag-logo {            
         display: block !important;
@@ -434,6 +441,10 @@ div.email-error {
         margin: 0 auto !important;
         border: 1px solid #ccc !important;
         border-bottom: none !important;
+    }
+    
+    .pag-nav-text li:last-child {
+        border-bottom: 1px solid #ccc !important;
     }
     
     .navbar-nav>li {
@@ -526,5 +537,9 @@ div.email-error {
     
     .big-container {
         padding: 15px;
+    }
+    
+    ul.left-menu {
+        margin: 15px 0 0 10px;
     }
 }
