@@ -12,6 +12,7 @@ require_once dirname(__FILE__).'/../app/providers/WorksectionProvider.php';
         <title>PAG Fine Homes Homepage</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="pag fine homes, pagfinehomes.com, modern houses, contemporary houses, homes, luxury homes, high end housing, real estate, contemporary houses for sale wa, contemporary houses for sale eastside, contemporary houses for sale seattle, contemporary houses for sale king county, high end houses for sale, luxury houses for sale, sustainable houses for sale, energy efficient houses for sale, estate size homes in King County">
 
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
