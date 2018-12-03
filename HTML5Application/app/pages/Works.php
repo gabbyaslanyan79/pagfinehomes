@@ -98,6 +98,7 @@ function pageWorks() {
                     </li>
                     <li><span class="tour-text">Take the Tour</span></li>    
                 </ul>
+                <div class="clear-float"></div>
                 <?php if($sectionKey != "sold"){ ?>
                     <ul class="current-props">
                     <?php
