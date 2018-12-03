@@ -24,7 +24,7 @@ function pageWorks() {
     }
     
     $pictures = $work->getPictures();
-    if($sectionKey != "current"){
+    if($sectionKey != "under"){
         $fronPic = array_shift($pictures);
     }
     else{
@@ -59,7 +59,7 @@ function pageWorks() {
         </div>
         <!--Big and small pictures start-->
         
-        <?php if($sectionKey == "current"){ ?>
+        <?php if($sectionKey == "under"){ ?>
         <div class="col-sm-8">
             <div class="big-container">
                 <br />
@@ -98,7 +98,17 @@ function pageWorks() {
                     </li>
                     <li><span class="tour-text">Take the Tour</span></li>    
                 </ul>
+                <?php if($sectionKey != "sold"){ ?>
+                    <ul class="current-props">
+                    <?php
+                    $highlights = $work->getHighlights();
+                    foreach($highlights as $highlight){?>
+                        <li><?php echo $highlight?></li>
+                    <?php } ?>
+                    </ul>
+                <?php } ?>
             </div>
+            
             <div class="clear-float"></div>
             <?php 
             foreach($pictures as $pic){?>

@@ -14,6 +14,7 @@ function pageHome(){
         <li data-target="#myCarousel" data-slide-to="6"></li>
         <li data-target="#myCarousel" data-slide-to="7"></li>
         <li data-target="#myCarousel" data-slide-to="8"></li>
+        <li data-target="#myCarousel" data-slide-to="9"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -52,6 +53,10 @@ function pageHome(){
 
         <div class="item">
             <img src="/img/carousel/house9.jpg" alt="carousel-image9">
+        </div>
+        
+        <div class="item">
+            <img src="/img/carousel/house10.jpg" alt="carousel-image10">
         </div>
     </div>
 

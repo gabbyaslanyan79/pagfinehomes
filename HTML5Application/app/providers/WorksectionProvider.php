@@ -8,16 +8,17 @@ class WorksectionProvider {
     private $workSections = [];
     
     public function __construct() {
-        $this->workSections['recent'] = $this->constructRecent();
-        $this->workSections['current'] = $this->constructCurrent();
+        $this->workSections['sold'] = $this->constructSold();
+        $this->workSections['available'] = $this->constructAvailableNow();
+        $this->workSections['under'] = $this->constructUnder();
     }
     
     public function getWorkSections(){
         return $this->workSections;
     }
     
-    private function constructRecent(){
-        $workSection = new WorkSection("Recent Homes");
+    private function constructSold(){
+        $workSection = new WorkSection("Sold Properties");
         $workSection->addWork('east_of_market_kirkland', $this->constructEastOfMarket());
         $workSection->addWork('enatai_bellevue', $this->constructEnataiBellevue());
         $workSection->addWork('cougar_mountain_bellevue', $this->constructCougarMountainBellevue());
@@ -25,9 +26,15 @@ class WorksectionProvider {
         return $workSection;
     }
     
-    private function constructCurrent(){
-        $workSection = new WorkSection("Current Homes");
+    private function constructAvailableNow(){
+        $workSection = new WorkSection("Available Now");
         $workSection->addWork('enatai_contemporary_farmhouse', $this->constructEnataiContempFarmhouse());
+
+        return $workSection;
+    }
+    
+    private function constructUnder(){
+        $workSection = new WorkSection("Under Construction");
         $workSection->addWork('clyde_hill_luxury_modern', $this->constructClydeHillLuxuryModern());
         $workSection->addWork('houghton_point_modern_I', $this->constructHoughtonPointI());
         $workSection->addWork('houghton_point_modern_II', $this->constructHoughtonPointII());
@@ -176,16 +183,36 @@ class WorksectionProvider {
     
     private function constructEnataiContempFarmhouse(){
         $work = new Work("Enatai Contemporary Farmhouse"); 
+        $work->setTourLink("https://tours.tourfactory.com/tours/tour.asp?t=2042000");
         $work->setPicturePath("/img/works/enatai_contemporary_farmhouse");
         $work->addPicture(new Picture('1.jpg'));
         $work->addPicture(new Picture('2.jpg'));
         $work->addPicture(new Picture('3.jpg'));
         $work->addPicture(new Picture('4.jpg'));
+        $work->addPicture(new Picture('5.jpg'));
+        $work->addPicture(new Picture('6.jpg'));
+        $work->addPicture(new Picture('7.jpg'));
+        $work->addPicture(new Picture('8.jpg'));
+        $work->addPicture(new Picture('9.jpg'));
+        $work->addPicture(new Picture('10.jpg'));
+        $work->addPicture(new Picture('11.jpg'));
+        $work->addPicture(new Picture('12.jpg'));
+        $work->addPicture(new Picture('13.jpg'));
+        $work->addPicture(new Picture('14.jpg'));
+        $work->addPicture(new Picture('15.jpg'));
+        $work->addPicture(new Picture('16.jpg'));
+        $work->addPicture(new Picture('17.jpg'));
+        $work->addPicture(new Picture('18.jpg'));
+        $work->addPicture(new Picture('19.jpg'));
+        $work->addPicture(new Picture('20.jpg'));
+        $work->addPicture(new Picture('21.jpg'));
+        $work->addPicture(new Picture('22.jpg'));
+        $work->addPicture(new Picture('23.jpg'));
         
         $work->addHighlight("3246 112th Ave SE Bellevue WA");
         $work->addHighlight("5,212 sq ft");
         $work->addHighlight("10,000 sq ft lot");
-        $work->addHighlight("Completion Summer of 2018");
+        
         
         return $work;
     }
